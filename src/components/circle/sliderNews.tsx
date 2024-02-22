@@ -25,9 +25,9 @@ const SliderNews = ({
     <>
       <Swiper
         modules={[Navigation]}
-        slidesPerView={3}
+        slidesPerView={window.innerWidth > 500 ? 3 : 1}
         className="sliderNews"
-        spaceBetween={90}
+        spaceBetween={window.innerWidth > 500 ? 90 : 50}
         navigation
       >
         {currentNews.map((news, i) => (

@@ -88,7 +88,6 @@
   position: absolute;
   bottom: 230px;
   left: 80px;
-  width: 12zpx;
   height: 88px;
   .pages {
     user-select: none;
@@ -204,4 +203,36 @@
   height: 15px;
 
   content: url(../../assets/arrowIcon.svg);
+}
+
+@media screen and (max-width: 500px) {
+  .circle {
+    display: none;
+  }
+  .Years {
+    font-size: 56px;
+    gap: 20px;
+    .startYear {
+      max-width: 127px;
+    }
+    .endYear {
+      max-width: 127px;
+    }
+  }
+  .paginationButtons {
+    bottom: 20px;
+    left: 20px;
+    .pages {
+      font-size: 20px;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+  }
+  .sliderNews {
+    bottom: 200px;
+    .news {
+      margin-left: 60px;
+    }
+  }
 }

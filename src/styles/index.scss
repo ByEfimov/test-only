@@ -25,7 +25,6 @@
     z-index: 10;
     position: absolute;
     left: -80px;
-
     width: 5px;
     bottom: 7px;
     top: 7px;
@@ -48,4 +47,15 @@ html {
 
 body {
   margin: 0;
+}
+@media screen and (max-width: 500px) {
+  .Wrapper {
+    overflow: hidden;
+    max-width: 500px;
+    .Title {
+      font-size: 20px;
+      left: 20px;
+      top: 60px;
+    }
+  }
 }
