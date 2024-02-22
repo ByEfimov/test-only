@@ -1,0 +1,207 @@
+.circle {
+  width: 530px;
+  height: 530px;
+  border: 1px solid rgba(66, 86, 122, 0.2);
+  border-radius: 50%;
+  position: relative;
+  margin-top: -150px;
+}
+
+.point.active {
+  width: 56px;
+  height: 56px;
+  background-color: white;
+  border: 1px solid #42567a;
+}
+
+.point {
+  width: 6px;
+  height: 6px;
+  background-color: #42567a;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.3s;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+}
+
+.point:hover {
+  width: 56px;
+  height: 56px;
+  background-color: white;
+  border: 1px solid #42567a;
+  transform: translate(-28px, -28px);
+}
+
+.pointText {
+  position: absolute;
+  font-family: var(--fontFamily);
+  font-weight: 500;
+  top: 50%;
+  transition: opacity 0.3s;
+  opacity: 0;
+  left: 50%;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  color: #42567a;
+}
+
+.point.active {
+  .pointText {
+    opacity: 1;
+  }
+}
+.point:hover {
+  .pointText {
+    opacity: 1;
+  }
+}
+
+.Years {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  font-family: var(--fontFamily);
+  font-size: 200px;
+  font-weight: 800;
+  gap: 80px;
+  margin-top: -150px;
+  .startYear {
+    max-width: 453px;
+    overflow: hidden;
+    color: var(--violet);
+  }
+  .endYear {
+    max-width: 453px;
+    color: var(--pink);
+    overflow: hidden;
+  }
+}
+.paginationButtons {
+  position: absolute;
+  bottom: 230px;
+  left: 80px;
+  width: 12zpx;
+  height: 88px;
+  .pages {
+    user-select: none;
+    font-size: 16px;
+    color: var(--borderColor);
+    font-family: var(--fontFamily);
+    font-weight: 500;
+  }
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    .button {
+      user-select: none;
+      transition: opacity 0.3s;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid var(--borderColor);
+      border-radius: 50%;
+    }
+    .buttonRight {
+      transform: rotate(180deg);
+    }
+    .buttonDisable {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+}
+
+.sliderNews {
+  position: absolute !important;
+  display: flex;
+  gap: 80px;
+  width: 1400px;
+  bottom: 90px;
+  .news {
+    flex-shrink: 0;
+    padding-left: 10px;
+    max-width: 345px;
+    height: 110px;
+    overflow: hidden;
+    margin-left: 60px;
+    padding: 0;
+    cursor: grab;
+    .year {
+      font-size: 25px;
+      color: #3877ee;
+      font-family: var(--secondFamile);
+    }
+    .description {
+      margin-top: 15px;
+      color: var(--borderColor);
+      font-weight: 500;
+      font-family: var(--fontFamily);
+    }
+  }
+}
+
+.swiper-button-prev {
+  width: 50px;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  cursor: pointer;
+  z-index: 10;
+  transform: translate(0, -50%);
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next {
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  right: 0;
+  z-index: 10;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  height: 50px;
+  transform: translate(0, -50%);
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next::after {
+  height: 15px;
+  transform: rotate(180deg);
+  content: url(../../assets/arrowIcon.svg);
+}
+
+.swiper-button-prev::after {
+  height: 15px;
+
+  content: url(../../assets/arrowIcon.svg);
+}
